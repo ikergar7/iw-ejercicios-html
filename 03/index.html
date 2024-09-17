@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reserva de sociedad</h1>
+    <p>Rellena el siguiente formulario par reservar la sociedad
+        para un día en concreto
+    </p>
+    
+    <form action="sever.php">
+        <fieldset>
+            <legend>Datos del usuario</legend>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+            <br><br>
+
+            <label for="socio">Eres socio?</label><br><br>
+            <input type="radio" name="socio" id="socio" value="si" checked>Sí, soy socio
+            <input type="radio" name="socio" id="no_socio" value="no"> No soy socio
+            <br><br>
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <br><br>
+
+            <label for="contraseña">Contraseña</label> 
+            <input type="password" name="contraseña" id="contraseña">
+            <br><br>
+
+        </fieldset>
+        <fieldset>
+            <legend>Datos de la reserva</legend>
+
+            <label for="edad">Edad</label>
+            <select name="edad" id="edad">
+                <option selected>Menor de 18</option>
+                <option>Menor de 30</option>
+                <option>Menor de 50</option>
+                <option>Menor de 70</option>
+            </select>
+            <br><br>
+
+            <label for="reserva">Selecciona la fecha y hora de reserva:</label>
+            <br><br>
+
+            <input type="date" id="reserva">
+            <input type="time">
+            <br><br>
+            
+            <textarea name="textarea" rows="10" cols="50" id="comentarios">Comentarios</textarea>
+            <br>
+        </fieldset>
+
+        <label for="condiciones">
+            <input type="checkbox" id="condiciones">
+            Acepto las condiciones
+        </label>
+        <br><br>
+
+        <input type="submit" name="enviar" id="enviar" value="Enviar">
+        
+    </form>
+</body>
+</html>
